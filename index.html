@@ -1,53 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .register-form {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 450px;
+    }
+    .register-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    .register-form input,
+    .register-form select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .register-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .register-form .inline-group {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .register-form .inline-group label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+    .register-form .inline-group input {
+      width: auto;
+      margin-right: 5px;
+    }
+    .register-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #6a11cb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .register-form button:hover {
+      background-color: #4b0d8b;
+    }
+  </style>
 </head>
 <body>
-    <form action="./login.html">
-        <p>
-            <input type="text" placeholder="Enter name"/>
-        </p>
-        <p>
-            <input type="email" placeholder="Enter email"/>
-        </p>
-        <p>
-            <input type="password" placeholder="Enter password"/>
-        </p>
-        <p>
-            <input type="password" placeholder="Confirm password"/>
-        </p>
-        <p>
-            <input type="number" placeholder="Enter mobile number"/>
-        </p>
-        <p>
-            <select>
-            <option value="">Select your state</option>
-            <option value="AP">AP</option>
-            <option value="TS">TS</option>
-            <option value="Ra">Rayalaseema</option>
-        </select>
-        <p>
-        <input type="radio" name="gender"/>Male
-        <input type="radio" name="gender"/>Female
-        </p>
-        <p>
-            <input type="text" placeholder="Education life"/>
-        </p>
-        <p>
-           <input type="checkbox"/>10th
-           <input type="checkbox"/>Intermediate
-           <input type="checkbox"/>diploma
-           <input type="checkbox"/>BTECH
-        </p>
-        <p>
-            <input type="file"/>
-        </p>
-        <p>
-            <button>register</button>
-        </p>
-    </form>
+  <form class="register-form" action="login.html">
+    <h2>Registration</h2>
+    <input type="text" placeholder="Enter name" required />
+    <input type="email" placeholder="Enter email" required />
+    <input type="password" placeholder="Enter password" required />
+    <input type="password" placeholder="Confirm password" required />
+    <input type="number" placeholder="Enter mobile number" required />
+    
+    <label>Select your state</label>
+    <select required>
+      <option value="">-- Select State --</option>
+      <option>AP</option>
+      <option>TS</option>
+      <option>Rayalaseema</option>
+    </select>
+
+    <label>Gender</label>
+    <div class="inline-group">
+      <label><input type="radio" name="gender" required /> Male</label>
+      <label><input type="radio" name="gender" required /> Female</label>
+    </div>
+
+    <input type="text" placeholder="Education life" />
+
+    <label>Education Level</label>
+    <div class="inline-group">
+      <label><input type="checkbox" /> 10th</label>
+      <label><input type="checkbox" /> Intermediate</label>
+      <label><input type="checkbox" /> Diploma</label>
+      <label><input type="checkbox" /> BTECH</label>
+    </div>
+
+    <label>Upload File</label>
+    <input type="file" />
+
+    <button type="submit">Register</button>
+  </form>
 </body>
 </html>
